@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588854017 source:e:\cyuyan\2020050701\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

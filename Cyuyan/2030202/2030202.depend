@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1583153390 source:e:\cyuyan\2030202\main.c
+	"stdio.h"
+	"stdlib.h"
+	"io.h"
+	"math.h"
+	"time.h"
+
