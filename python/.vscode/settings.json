@@ -1,6 +1,3 @@
 {
-    "python.analysis.memory.keepLibraryAst": true,
-    "python.analysis.memory.keepLibraryLocalVariables": true,
-    "python.pythonPath": "D:\\Develop\\Python38\\python.exe",
-    "python.autoUpdateLanguageServer": false
+    "python.pythonPath": "D:\\Develop\\Python38\\python.exe"
 }
