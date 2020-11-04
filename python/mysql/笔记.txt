@@ -1,83 +1,247 @@
 
 
-һ. MySQL���
+一. MySQL语句
 
-1. �������ݿ���� 
+1. 关于数据库操作 
 
-    ----�������ݿ�
+    ----进入数据库
         mysql -u root -p
 
-    ----��ʾ���б�
+    ----显示库列表
         show databases;
 
-    ----�½�\ɾ��һ�����ݿ�
+    ----新建\删除一个数据库
         create database student;
         drop database student;
 
-    ----ʹ��/�л����ݿ�
+    ----使用/切换数据库
         use student;
 
-2. �������
+2. 表格操作
 
-    ��1���������� -- ����������
+    （1） ---------------------------------创建和添加
 
-        ----��������
-            create table gread1(
+        ----创建表格
+            create table if not exists gread1(
                 id int unsigned primary key not null auto_increment,
                 name varchar(20),
-                gender enum("��","Ů","��"),  
+                gender enum("男","女","无"),  
                 scor  int unsigned
             );
-            //unsigned �޷���
-            //primary key �ؼ���
-            //not null ����Ϊ��
-            //auto_increment �Զ�����
+            //unsigned 无符号
+            //primary key 关键序
+            //not null 不能为空
+            //auto_increment 自动递增
 
-        ----��ʾ�����ݿ������table
+        ----显示本数据库的所有table
             show tables;   
 
-        ----��ʾtable������ �ֶ�
+        ----显示table的所有 字段
             desc gread1;
 
-        ----���ӱ�����
-            insert into gread1 values(0, "С��" , "��", 100);
-            insert into gread1 values(0, "С��" , "��", 100),(1, "С��" , "��", 100);
+        ----添加表内容
+            insert into gread1 values(0, "小明" , "男", 100);
+            insert into gread1 values(0, "小明" , "男", 100),(1, "小陈" , "男", 100);
 
-        ----��ʾ������������
+        ----显示表格所有内容
             select * from gread1;
-            select (�ֶ������ֶ���) from gender1 where id=1; 
+            select (字段名，字段名) from gender1 where id=1; 
 
-        ----��ʾ���Ĵ������
+        ----显示表的创建语句
             show create table gread1;
+
         
 
-    ��2���������� -- �޸��ֶ�  alter table (table��) (ģʽ);
+    （2）---------------------------------修改字段  alter table (table名) (模式);
 
-        ----�����ֶ� ����һ��brithday�ֶ�
+        ----添加字段 添加一个brithday字段
             alter table gread1 add brithday datetime;
 
-        ----�޸��ֶε��������� modify ���޸����֣�ֻ�޸���������
+        ----修改字段的数据类型 modify 不修改名字，只修改数据类型
             alter table gread1 modify birthday data;  
-            //�������datetime��Ϊdate����
+            //将上面的datetime改为date类型
 
-        ----�޸��ֶε����� �� ��������
+        ----修改字段的名字 和 数据类型
             alter table gread1 change birthday birth data;
-            //���ֶ�birthday ��Ϊ birth ��������Ϊdate
+            //将字段birthday 改为 birth 数据类型为date
 
-        ----ɾ���ֶ� 
+        ----删除字段 
             alter table gread1 drop birth;
 
-        ----ɾ����
+        ----删除表
             drop table gread1;
 
-    ��3����������  --�޸ı� update (table��) set (id = 1);
-        ----�޸ı�
-            update stu set gender = 1; //ȫ������
-            update stu set gender = 1 where id=1; // id = 1 �ĵط�����
 
-    ��4����������  --��ѯ�� select (*) from (table��) where () and ();
-        ----��ѯ���   where �൱�� if 
+
+    （3）---------------------------------修改表 update (table名) set (id = 1);
+        ----修改表
+            update stu set gender = 1; //全部设置
+            update stu set gender = 1,name = "meimei" where id=1; // id = 1 的地方设置
+
+
+    （4）---------------------------------查询表 select (*) from (table名) where () and ();
+        ----查询语句   where 相当于 if 
             select name from stu where id = 1;
+            select name as "姓名" ,gender as "性别" from student.stu ;
+            select name as 姓名 ,num as 号码, gender as 性别 from student.stu ;
+            select distinct gender from stu; // distinct 去重
 
+        ----条件查询 比较运算符 > < = != >= <= <>
+            select * from stu where age > 18 ;
+
+        ----条件查询 逻辑运算符 and or not 
+            select * from stu where age > 18 and age < 50;
+            select * from stu where not age > 18 and gender = 1;  //not age >18
+            select * from stu where not (age > 18 and gender = 1);  //not (age > 18 and gender = 1)
+
+        ----like  模糊查询
+            获取 某字段中 含有 某字符 的信息（%替代零个一个或多个字符、_替代一个字符）
+            select * from (table名) where (字段) like ('%--')
+            select * from stu where num like '%10'
+            select * from stu where name like '%华';
+            select * from stu where name like '__';  //两个字的名字
+            select * from stu where name like '___%';  //三个字及以上的名字
+        
+        ----rlike 正则表达式
+            select * from stu where name rlink '^周.*';  //以周开头
+            select * from stu where name rlink '^周.伦&';  //以周开头 以杰结尾
+
+        ----in () 非连续 范围查询
+            select * from stu where age in (12,16,18);   //年龄为12 16 18
+
+        ----between .. and ..  连续查询
+            select * from stu where age between 18 and 50;  //年龄在18-50 包括二者
+            select * from stu where age not between 18 and 50;  //年龄不在18-50 包括二者
+
+        ---- 判空 is null 判断非空 is not null
+
+        ----保留两位小数 round(price,2)
             
 
+
+
+
+    （5）---------------------------------删除数据 delete from (table名) where ();
+         delete from stu where id = 1;  //把id = 1 那一行删除了
+         delect from stu;               //把 stu 清空
+
+
+3.  MySQL高级操作
+
+
+
+    （1）排序 
+        ----select语句使用 order by 子句将查询数据排序后返回 asc/desc:升序/降序
+            select * from (table名) order by (字段) asc;
+            select * from stu where num like '%10%' order by num asc;
+            select * from stu where num like '%10%' order by num desc,high asc; //先按照num排序高到低 当num相同时按照high低到高排序
+    
+    （2）分组
+        ----group by 语句根据一列或多列对结构集进行分组 
+            select gender,count(gender) from stu group by gender; //显示分组后 显示个体个数
+            select gender,group_concat(name) from stu group by gender; //显示分组后 显示组里面的个体
+            select gender,group_concat(name,' ',id,' ' ,num) from stu group by gender; //显示分组后 显示组里面的个体name id num
+
+        ----having 对分组进行判断
+            select gender,group_concat(name) from stu group by gender having avg(age)>20; //显示平均年龄大于20 的性别
+
+    （3）查找
+        ----limit 限制显示个数
+            select * from stu limit 3;  //只显示三行
+            select * from stu limit 2,3;  //从第三个开始显示三行
+
+    （4）连接查询   
+        ----内链接   inner join ... on...  显示都有的
+            select stu.*,class.name from (table1名) inner join (table2名) on (条件);  //显示table1中满足table2的条件联系
+            select stu.*,class.name from stu.name inner join class on stu.class_id=class.id; 
+        
+        ----左链接  left join     显示左边有的
+            select stu.*,class.name from stu left join class on stu.class_id = class.id;  //stu里面的全部显示 class没有内容的为null
+
+        ----右链接 right join    
+
+
+        ----自关联 inner join   on 查同一个表的内容  省-市-县
+            select p.name,c.name from areas as p inner join area as c on c.c_id = p.p_id having p.name like '重庆%'; //查找重庆的区县
+            select p.name from areas as p where pid = (select aid  where tittle = '重庆省');
+
+    （5）子查询
+        ----select * from stu where height = (select max(height) from stu);  //查找身高最高的同学
+
+    （6）插入   一张表的数据插入另一张表的数据
+            insert into class (name) select class_name from stu group by class_name;
+            //将stu中班级分组后插入class中
+
+    （7） 外关联   添加外键
+        ----将本表中的数据和外表进行关联  alter table (table1名) add foreign key (table1字段) references (table2名)(table2字段);
+            alter table goods add foreign key (cate_id) references good_cates(id);
+            //将表goods的cate_id与good_cates的id相关联 ，以后插入的时候自动关联，没能关联就报错(有限制)
+
+        ---- 创建表的时候直接设计外关联
+            create table stu(
+                id int unsigned primary key not null auto_increment;
+                name varchar(20) not null;
+                foreign key(class_id) references classes(id);    //直接关联
+            );
+
+
+
+
+
+
+create table goodcates(
+id int unsigned primary key auto_increment comment '分类id',
+parent_id int unsigned not null default 0 comment'上级分类id',
+name varchar(100) not null default '' comment'名称',
+sort int not null default 0 comment'排序',
+is_show tinyint unsigned not null default 0 comment'是否显示',
+create_time datetime not null default current_timestamp comment'创建时间',
+update_time datetime default null comment'更新时间'
+);
+
+
+insert into goodcates(id,parent_id,name)values
+(1,0,'办公'),(2,1,'耗材'),(3,2,'文具'),(4,0,'电子产品'),
+(5,4,'通讯'),(6,5,'手机'),(7,4,'影音'),(8,7,'音箱'),
+(9,7,'耳机'),(10,4,'电脑'),(11,10,'台式电脑'),(12,10,'笔记本'),
+(13,0,'服装'),(14,13,'女装'),(15,14,'风衣'),(16,14,'毛衣');
+
+
+create table goods(
+id int unsigned primary key auto_increment comment'商品id',
+category_id int unsigned not null default 0 comment'分类id',
+spu_id int unsigned not null default 0 comment'SPU id',
+sn varchar(20) not null default '' comment'编号',
+name varchar(120) not null default ''comment'名称',
+keyword varchar(255)not null default '' comment'关键字',
+picture varchar(255) not null default'' comment'图片',
+tips varchar(255) not null default '' comment'提示',
+description varchar(255) not null default '' comment'描述',
+content text not null comment'详情',
+price decimal(10,2)unsigned not null default 0 comment '价格',
+stock int unsigned not null default 0 comment '库存',
+score decimal (3,2) unsigned not null default 0 comment'评分',
+is_on_sale tinyint unsigned not null default 0 comment'是否上架',
+is_del tinyint unsigned not null default 0 comment'是否删除',
+is_free_shipping tinyint unsigned not null default 0 comment'是否包邮',
+sell_count int unsigned not null default 0 comment'销量计数',
+comment int unsigned not null default 0 comment'评论计数',
+on_sale_time datetime default null comment'上架时间',
+create_time datetime not null default current_timestamp comment'创建时间',
+update_time datetime default null comment'更新时间'
+);
+
+
+
+
+insert into goods(id,category_id,name,keyword,content,price,stock,score,comment) values
+(1,3,'2B铅笔','文具','考试专用',0.5,500,4.9,40000);
+(2,3,'钢笔','文具','练字必不可少',15,300,3.9,500),
+(3,3,'碳素笔','文具','平时使用',1,500,5,98000),
+(4,12,'超薄笔记本','电子产品','轻小便携',5999,0,2.5,200),
+(5,6,'智能手机','电子产品','人人必备',1999,0,5,98000),
+(6,8,'桌面音箱','电子产品','扩音装备',69,750,4.5,1000),
+(7,9,'头戴耳机','电子产品','独享个人世界',109,0,3.9,500),
+(8,10,'办公电脑','电子产品','适合办公',2000,0,4.8,6000),
+(9,15,'收腰风衣','服装','春节潮流单品',299,0,4.9,40000),
+(10,16,'薄毛衣','服装','居家旅行必备',48,0,4.8,98000);

@@ -1,19 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    int i,num, a, b, c, d;
-    for (i = 32; i < 100; i++)
+    int i, s1 = 1, s2 = 1;
+    float x, sum = 0;
+    for (i = 1; i <= 20; i++)
     {
-        num = i * i;
-        a = num / 1000;   //万位
-        b = num / 100 % 10;  //千位
-        c = num % 100 / 10;  //十位
-        d = num % 10;    //个位
-        if (a == b && c == d && a != c)
-        {
-            printf("%d",num);
-        }
+        x = s1 + s2;
+        s1 = s2;
+        s2 = x;
+        sum = (double)s2 / s1;
     }
-    return 0;
-
+    printf("sum = %9.6f\n", sum);
 }
