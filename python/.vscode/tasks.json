@@ -2,8 +2,8 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe build active file",
-            "command": "D:\\Develop\\MinGW\\bin\\g++.exe",
+            "label": "C/C++: gcc.exe build active file",
+            "command": "D:\\Develop\\mingw64\\bin\\gcc.exe",
             "args": [
                 "-g",
                 "${file}",
@@ -11,7 +11,7 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "D:\\Develop\\MinGW\\bin"
+                "cwd": "D:\\Develop\\mingw64\\bin"
             },
             "problemMatcher": [
                 "$gcc"

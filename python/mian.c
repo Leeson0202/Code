@@ -1,14 +1,33 @@
 #include <stdio.h>
+#define N 10
+
+void ma(int a, int b )
+{
+    if (a>b)
+        printf("%d",a);
+    else
+    {
+        printf("%d",b);
+    }
+    
+}
+void mi(int a, int b )
+{
+    if (a<b)
+        printf("%d",a);
+    else
+    {
+        printf("%d",b);
+    }
+    
+}
+
+
+
 int main()
 {
-    int i, s1 = 1, s2 = 1;
-    float x, sum = 0;
-    for (i = 1; i <= 20; i++)
-    {
-        x = s1 + s2;
-        s1 = s2;
-        s2 = x;
-        sum = (double)s2 / s1;
-    }
-    printf("sum = %9.6f\n", sum);
+    int a, b = 1;
+    scanf("%d", &a);
+    a > b ? ma(a,b) : mi(a,b);
+    return 0;
 }

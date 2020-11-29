@@ -1,0 +1,26 @@
+wxml:
+
+1.图片 <image  scr='图片路径'>  </image>
+2.按钮 <button "属性内容"> "直接写文字" </button>
+   open-type :  
+      open-type="getUserInfo" 表示激活获取微信用户信息功能
+ 
+   bindgetuserinfo:
+      bindgetuserinfo="getmyinfo" 表示将获取的数据传给自定义函数getmyinfo
+
+
+js:
+
+1.函数定义方法
+    函数名:function(参数列表（可不写）){“函数内容”}
+      函数里面 "let info"=e.detail.userInfo
+      表示定义变量info ,并将e.detail.userInfo的数据传给info
+2.将信息展示到操作台：
+   函数中加入 console.log(展示的内容（变量）)
+3.修改变量方法：
+    函数中加入this.setdata({  要修改的变量})
+       例: this.setData({   //修改变量
+                 name: info.nickName,//更新名称
+                 src: info.avatarUrl//更新图片来源
+            })
+ 

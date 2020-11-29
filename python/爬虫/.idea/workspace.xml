@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3dbb6354-9bf4-44d6-8ada-7aff11a71077" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/../mysql/.idea/mysql.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/dataSources/4073d1b0-ef47-48f9-b2e4-37067b865b43.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/dataSources/4073d1b0-ef47-48f9-b2e4-37067b865b43/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/socket.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/_init_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket/qq.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cyuyan/12312/12312.layout" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cyuyan/12312/12312.layout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cyuyan/12312/bin/Debug/12312.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cyuyan/12312/bin/Debug/12312.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cyuyan/12312/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cyuyan/12312/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cyuyan/12312/obj/Debug/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cyuyan/12312/obj/Debug/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mian.c" beforeDir="false" afterPath="$PROJECT_DIR$/../mian.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mian.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../mian.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/mysql_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql/mysql_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/sql_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql/sql_text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/笔记.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql/笔记.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JupyterTrust" id="c9cf519b-7fb9-45cf-b3b2-4b4b2225aabd" />
+  <component name="ProjectId" id="1kgPczxeyB8393utuVrq7bKb7Oa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../socket" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3dbb6354-9bf4-44d6-8ada-7aff11a71077" name="默认的" comment="" />
+      <created>1606119344695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606119344695</updated>
+      <workItem from="1606119345740" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="518" y="150" key="FileChooserDialogImpl" timestamp="1606119363797">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="518" y="150" key="FileChooserDialogImpl/0.0.1475.789@0.0.1475.789" timestamp="1606119363797" />
+  </component>
+</project>

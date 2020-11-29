@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="970009d5-f94d-46ed-9030-d15bd22375a9" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/../mysql/.idea/mysql.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cyuyan/12312/12312.layout" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cyuyan/12312/12312.layout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cyuyan/12312/bin/Debug/12312.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cyuyan/12312/bin/Debug/12312.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cyuyan/12312/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cyuyan/12312/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cyuyan/12312/obj/Debug/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cyuyan/12312/obj/Debug/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mian.c" beforeDir="false" afterPath="$PROJECT_DIR$/../mian.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mian.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../mian.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/mysql_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql/mysql_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/sql_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql/sql_text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/笔记.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql/笔记.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/Leeson0202/Code" />
+      </set>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="c9cf519b-7fb9-45cf-b3b2-4b4b2225aabd" />
+  <component name="ProjectId" id="1kVlhLbbekV1zhIdPRoFt4x9ZTl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../B_Mylearning/2020/2/B/prj6" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Code\TeamPrj\scrapy" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Code\TeamPrj\sql" />
+      <recent name="E:\Code\TeamPrj\scrapy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.__init__">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TeamPrj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../TeamPrj" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../TeamPrj/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="in_sql" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TeamPrj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../TeamPrj/sql" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../TeamPrj/sql/in_sql.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sql_text" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mysql" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mysql" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mysql/sql_text.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.sql_text" />
+        <item itemvalue="Python.in_sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="970009d5-f94d-46ed-9030-d15bd22375a9" name="默认的" comment="" />
+      <created>1605793759037</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605793759037</updated>
+      <workItem from="1605793760051" duration="1745000" />
+      <workItem from="1605795556437" duration="15702000" />
+      <workItem from="1605854436966" duration="37000" />
+      <workItem from="1605854481924" duration="91000" />
+      <workItem from="1605854582473" duration="265000" />
+      <workItem from="1605854857616" duration="2127000" />
+      <workItem from="1605856998166" duration="258000" />
+      <workItem from="1605857265215" duration="474000" />
+      <workItem from="1605873353830" duration="12411000" />
+      <workItem from="1605890657743" duration="377000" />
+      <workItem from="1605891047788" duration="21000" />
+      <workItem from="1606119141764" duration="55000" />
+      <workItem from="1606119207327" duration="119000" />
+      <workItem from="1606119366834" duration="82000" />
+      <workItem from="1606119466731" duration="1250000" />
+      <workItem from="1606124059001" duration="632000" />
+      <workItem from="1606140536149" duration="9000" />
+      <workItem from="1606146956356" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="311" y="236" key="#SQL_方言" timestamp="1605794159151">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="311" y="236" key="#SQL_方言/0.0.1475.789@0.0.1475.789" timestamp="1605794159151" />
+    <state x="330" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605848242944">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="330" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1475.789@0.0.1475.789" timestamp="1605848242944" />
+    <state x="488" y="264" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1605854571177">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="488" y="264" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1475.789@0.0.1475.789" timestamp="1605854571177" />
+    <state x="518" y="150" key="FileChooserDialogImpl" timestamp="1606146981560">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="518" y="150" key="FileChooserDialogImpl/0.0.1475.789@0.0.1475.789" timestamp="1606146981560" />
+    <state width="416" height="419" key="GridCell.Tab.0.bottom" timestamp="1605890502261">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state width="416" height="419" key="GridCell.Tab.0.bottom/0.0.1475.789@0.0.1475.789" timestamp="1605890502261" />
+    <state width="416" height="419" key="GridCell.Tab.0.center" timestamp="1605890502261">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state width="416" height="419" key="GridCell.Tab.0.center/0.0.1475.789@0.0.1475.789" timestamp="1605890502261" />
+    <state width="416" height="419" key="GridCell.Tab.0.left" timestamp="1605890502261">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state width="416" height="419" key="GridCell.Tab.0.left/0.0.1475.789@0.0.1475.789" timestamp="1605890502261" />
+    <state width="416" height="419" key="GridCell.Tab.0.right" timestamp="1605890502261">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state width="416" height="419" key="GridCell.Tab.0.right/0.0.1475.789@0.0.1475.789" timestamp="1605890502261" />
+    <state width="416" height="597" key="GridCell.Tab.1.bottom" timestamp="1605890502259">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state width="416" height="597" key="GridCell.Tab.1.bottom/0.0.1475.789@0.0.1475.789" timestamp="1605890502259" />
+    <state width="416" height="597" key="GridCell.Tab.1.center" timestamp="1605890502259">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state width="416" height="597" key="GridCell.Tab.1.center/0.0.1475.789@0.0.1475.789" timestamp="1605890502259" />
+    <state width="416" height="597" key="GridCell.Tab.1.left" timestamp="1605890502258">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state width="416" height="597" key="GridCell.Tab.1.left/0.0.1475.789@0.0.1475.789" timestamp="1605890502258" />
+    <state width="416" height="597" key="GridCell.Tab.1.right" timestamp="1605890502259">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state width="416" height="597" key="GridCell.Tab.1.right/0.0.1475.789@0.0.1475.789" timestamp="1605890502259" />
+    <state x="239" y="39" key="SettingsEditor" timestamp="1606119325988">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="239" y="39" key="SettingsEditor/0.0.1475.789@0.0.1475.789" timestamp="1606119325988" />
+    <state width="744" height="401" key="XDebugger.FullValuePopup" timestamp="1605889435961">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state width="744" height="401" key="XDebugger.FullValuePopup/0.0.1475.789@0.0.1475.789" timestamp="1605889435961" />
+    <state x="637" y="282" width="323" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1605848437026">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="637" y="282" width="323" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1475.789@0.0.1475.789" timestamp="1605848437026" />
+    <state x="596" y="133" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605848458928">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="596" y="133" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1475.789@0.0.1475.789" timestamp="1605848458928" />
+    <state x="475" y="126" width="523" height="536" key="find.popup" timestamp="1605804694400">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="475" y="126" width="523" height="536" key="find.popup/0.0.1475.789@0.0.1475.789" timestamp="1605804694400" />
+    <state x="515" y="268" width="585" height="281" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1605856275118">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="515" y="268" width="585" height="281" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1475.789@0.0.1475.789" timestamp="1605856275118" />
+    <state x="400" y="110" width="672" height="678" key="search.everywhere.popup" timestamp="1605853609711">
+      <screen x="0" y="0" width="1475" height="789" />
+    </state>
+    <state x="400" y="110" width="672" height="678" key="search.everywhere.popup/0.0.1475.789@0.0.1475.789" timestamp="1605853609711" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../TeamPrj/__init__.py</url>
+          <line>145</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../TeamPrj/sql/in_sql.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../TeamPrj/sql/in_sql.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../TeamPrj/sql/in_sql.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../TeamPrj/sql/in_sql.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../TeamPrj/sql/in_sql.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/socket$in_sql.coverage" NAME="in_sql Coverage Results" MODIFIED="1605803531705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../TeamPrj/sql" />
+    <SUITE FILE_PATH="coverage/socket$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1605890035680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../TeamPrj" />
+    <SUITE FILE_PATH="coverage/socket$sql_text.coverage" NAME="sql_text Coverage Results" MODIFIED="1605798107653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../mysql" />
+  </component>
+</project>

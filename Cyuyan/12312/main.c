@@ -1,19 +1,18 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int i,num, a, b, c, d;
-    for (i = 32; i < 100; i++)
+    double x=0,h=100.0;
+    float length, high;
+    int i;
+    for(i=1; i<=10; i++)
     {
-        num = i * i;
-        a = num / 1000;   //万位
-        b = num / 100 % 10;  //千位
-        c = num % 100 / 10;  //十位
-        d = num % 1000;    //个位
-        if (a == b && c == d && a != c)
-        {
-            printf("%d",num);
-        }
+        x +=h;
+        h = h /2.0;
+        x += h;
     }
+    length = float(x);
+    high = float(h);
+    printf("the total of road is %f\n", length);
+    printf("the tenth is %f meter\n", high);
     return 0;
-
 }

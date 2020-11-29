@@ -1,131 +1,234 @@
-#include <stdio.h>
-#define MaxSize  100
-typedef int DataType;
-typedef struct
-{
-    DataType list[MaxSize];
-    int size;
-} SeqList;
 
-void ListInitiate(SeqList *L)   /*初始化顺序表L*/
+#include <stdio.h> /*该文件包含printf()等函数*/
+#include <stdlib.h>/*该文件包含exit()等函数*/
+#include <malloc.h>/*该文件包含malloc()等函数*/
+
+typedef int DataType; /*定义DataType为int*/
+
+typedef struct Node
 {
-    L->size = 0;                    /*定义初始数据元素个数*/
+    DataType data;
+    struct Node *next;
+} SLNode;
+
+void ListInitiate(SLNode **head) /*初始化*/
+{
+    /*如果有内存空间，申请头结点空间并使头指针head指向头结点*/
+    if ((*head = (SLNode *)malloc(sizeof(SLNode))) == NULL)
+        exit(1);
+    (*head)->next = NULL; /*置链尾标记NULL */
 }
 
-int ListLength(SeqList L)/*返回顺序表L的当前数据元素个数*/
+int ListLength(SLNode *head) /* 单链表的长度*/
 {
-    return L.size;
+    SLNode *p = head; /*p指向首元结点*/
+    int size = 0;     /*size初始为0*/
+
+    while (p->next != NULL) /*循环计数*/
+    {
+        p = p->next;
+        size++;
+    }
+    return size;
 }
 
-int ListInsert(SeqList *L, int i, DataType x)
-/*在顺序表L的位置i（0 ≤ i ≤ size）前插入数据元素值x   插入成功返回1，插入失败返回0*/
+int ListInsert(SLNode *head, int i, DataType x)
+/*在带头结点的单链表head的数据元素ai（0 ≤ i ≤ size）结点前*/
+/*插入一个存放数据元素x的结点*/
 {
+    SLNode *p, *q;
     int j;
-    if(L->size >= MaxSize)
-    {
-        printf("顺序表已满无法插入! \n");
-        return 0;
-    }
-    else if(i < 0 || i > L->size )
-    {
-        printf("参数i不合法! \n");
-        return 0;
-    }
-    else
-    {
-        for(j = L->size; j < i; j--)
-            L->list[j+1] = L->list[j];/*为插入做准备*/
 
-        L->list[i] = x;/*插入*/
-        L->size ++;/*元素个数加1*/
-        return 1;
+    p = head; /*p指向首元结点*/
+    j = -1;   /*j初始为-1*/
+    while (p->next != NULL && j < i - 1)
+    /*最终让指针p指向数据元素ai-1结点*/
+    {
+        p = p->next;
+        j++;
     }
+
+    if (j != i - 1)
+    {
+        printf("插入位置参数错！");
+        return 0;
+    }
+
+    /*生成新结点由指针q指示*/
+    if ((q = (SLNode *)malloc(sizeof(SLNode))) == NULL)
+        exit(1);
+    q->data = x;
+
+    //此段程序有一处错误
+    q->next = p->next; /*给指针q->next赋值*/
+    p->next = q;       /*给指针p->next重新赋值*/
+    return 1;
 }
 
-int ListDelete(SeqList *L, int i, DataType *x)
-/*删除顺序表L中位置i（0 ≤ i ≤ size - 1）的数据元素值并存放到参数x中*/
-/*删除成功返回1，删除失败返回0*/
+int ListDelete(SLNode *head, int i, DataType *x)
+/*删除带头结点的单链表head的数据元素ai（0 ≤ i ≤ size - 1）结点*/
+/*删除结点的数据元素域值由x带回。删除成功时返回1；失败返回0*/
 {
+    SLNode *p, *s;
     int j;
-    if(L->size <= 0)
+
+    p = head; /*p指向首元结点*/
+    j = -1;   /*j初始为-1*/
+    while (p->next != NULL && p->next->next != NULL && j < i - 1)
+    /*最终让指针p指向数据元素ai-1结点*/
     {
-        printf("顺序表已空无数据元素可删! \n");
+        p = p->next;
+        j++;
+    }
+
+    if (j != i - 1)
+    {
+        printf("删除位置参数错！");
         return 0;
     }
-    else if(i < 0 || i > L->size-1)
-    {
-        printf("参数i不合法");
-        return 0;
-    }
-    else
-    {
-        *x = L->list[i-1];/*保存删除的元素到参数x中*/
-        for(j = i ; j <= L->size-1; j++)
-            L->list[j-1] = L->list[j];/*依次前移*/
-        L->size--;/*数据元素个数减1*/
-        return 1;
-    }
+
+    //此段程序有一处错误
+    s = p->next;       /*指针s指向数据元素ai结点*/
+    *x = s->data;      /*把指针s所指结点的数据元素域值赋予x*/
+    p->next = s->next; /*把数据元素ai结点从单链表中删除*/
+    free(s);           /*释放指针s所指结点的内存空间*/
+    return 1;
 }
 
-int ListGet(SeqList L, int i, DataType *x)
-/*取顺序表L中第i个数据元素的值存于x中，成功则返回1，失败返回0*/
+int ListGet(SLNode *head, int i, DataType *x)
+/*取数据元素ai和删除函数类同，只是不删除数据元素ai结点*/
 {
-    if(i < 0 || i > L.size-1)
+    SLNode *p;
+    int j;
+
+    p = head;
+    j = -1;
+    while (p->next != NULL && j < i)
     {
-        printf("参数i不合法! \n");
+        p = p->next;
+        j++;
+    }
+
+    if (j != i)
+    {
+        printf("取元素位置参数错！");
         return 0;
     }
-    else
-    {
-        *x = L.list[i];
-        return 1;
-    }
+
+    //此段程序有一处错误
+    *x = p->data;
+    return 1;
 }
 
-void Listlianjie(SeqList *L1,SeqList *L2)     //将 List 2 插入到 List 1 后
+void Destroy(SLNode **head)
 {
-    int j = 0;
-    while(L1->size < MaxSize && j < L2->size)
+    SLNode *p, *p1;
+
+    p = *head;
+    while (p != NULL)
     {
-        L1->list[L1->size] = L2->list[j];
-       j++;
-       L1->size++;
-    };
-    return;
+        p1 = p;
+        p = p->next;
+        free(p1);
+    }
+    *head = NULL;
+}
+
+SLNode *Link(SLNode *a, SLNode *b)
+{
+    SLNode *r = NULL, *pa = a->next, *pb = b->next;
+    a->next = NULL; //初始化 为空
+    while (pa && pb)
+        if (pa->data <= pb->data)
+        {
+            r = pa->next;       // 1 r = pa+1
+            pa->next = a->next; // 2 pa+1 = a+1 = null
+            a->next = pa;       // 3 a+1 = pa
+            pa = r;             // 4 pa = r
+        }
+        else
+        {
+            r = pb->next;
+            pb->next = a->next;
+            a->next = pb;
+            pb = r;
+        }
+    if (pa)
+        pb = pa;
+    while (pb)
+    {
+        r = pb->next;
+        pb->next = a->next;
+        a->next = pb;
+        pb = r;
+    }
+    free(pb);
+}
+
+int sort(SLNode *a)
+{
+    SLNode *pa = a;
+
+    return 1;
 }
 
 void main(void)
 {
-    SeqList myList1;
-    SeqList myList2;
-    int i, x;
-    ListInitiate(&myList1);  //初始化 List 1
-    ListInitiate(&myList2);  //初始化 List 2
-    for(i = 0; i < 10; i++)            //在 List 1 中插入1-10
-        ListInsert(&myList1, i, i+1);
-    for(i = 0; i < 10; i++)            //在 List 1 中插入11-20
-        ListInsert(&myList2, i, i+11);
-    ListDelete(&myList1, 5, &x);           //删除 List 1 中的元素5
-    printf("List 1 : ");
-    for(i = 0; i < ListLength(myList1); i++)   //打印 List 1
+    SLNode *head1, *head2;
+    int i, x, j;
+    ListInitiate(&head1);
+    ListInitiate(&head2); /*初始化*/
+
+    for (i = 0; i < 10; i++)
     {
-        ListGet(myList1,i,&x);
-        printf("%d ", x);
+        if (ListInsert(head1, i, i+1) == 0) /*插入10个数据元素*/
+        {
+            printf("错误! \n");
+            return;
+        }
     }
-    printf("\nList 2 : ");
-    for(i = 0; i < ListLength(myList2); i++)   //打印 List 2
+    for (i = 0 ; i < 5; i++)
     {
-        ListGet(myList2,i,&x);
-        printf("%d ", x);
+        if (ListInsert(head2, i, i+1) == 0) /*插入10个数据元素*/
+        {
+            printf("错误! \n");
+            return;
+        }
     }
-    printf("\n");
-    printf("\n将List 2 插入 List 1 后\n");     //将 List 2 插入到 List 1 后
-    Listlianjie(&myList1,&myList2);
-    printf("List 1 : ");
-    for(i = 0; i < ListLength(myList1); i++)   //打印 List 1
+
+    if (ListDelete(head1, 4, &x) == 0) /*删除数据元素5*/
     {
-        ListGet(myList1,i,&x);
-        printf("%d ", x);
+        printf("错误! \n");
+        return;
     }
-    printf("\n\n");
+    printf("删除后：");
+    for (i = 0; i < ListLength(head1); i++)
+    {
+
+        if (ListGet(head1, i, &x) == 0) /*取元素*/
+        {
+            printf("错误! \n");
+            return;
+        }
+        else
+            printf("%d ", x); /*显示数据元素*/
+    }
+
+
+    Link(head1, head2);
+    printf("\n连接：");
+    for (i  = 0; i < ListLength(head1); i++)
+    {
+
+        if (ListGet(head1, i, &x) == 0) /*取元素*/
+        {
+            printf("错误! \n");
+            return;
+        }
+        else
+            printf("%d ", x); /*显示数据元素*/
+    }
+
+    Destroy(&head1);
+    Destroy(&head2);
 }

@@ -123,7 +123,7 @@
 
     （5）---------------------------------删除数据 delete from (table名) where ();
          delete from stu where id = 1;  //把id = 1 那一行删除了
-         delect from stu;               //把 stu 清空
+         delete from stu;               //把 stu 清空
 
 
 3.  MySQL高级操作
@@ -183,6 +183,48 @@
                 name varchar(20) not null;
                 foreign key(class_id) references classes(id);    //直接关联
             );
+
+
+
+4. python 操作数据库
+    （1）格式化
+        from pymysql import *
+
+        # 打开数据库链接，不加端口号链接 创建一个connection类
+        conn = connect(host="localhost", port=3306, user="root",
+                    password="123456", database="shang", charset='utf8')
+        # 使用数据库连接对象的cursor()方法创建一个游标对象 cursor
+        cursor = conn.cursor()
+        # -------------------------------------------开始
+        # 使用游标对象的execute()方法执行SQL语句
+        cursor.execute("select * from goods;")   #想做什么做什么
+        count = cursor.fetchall()
+        for i in count:
+            print("{:^3}{:^3}{:^10}{:^10}{:^10}".format(i[0], i[1], i[2], i[3], i[4]))
+        
+
+        # ------------------------------------------结束
+        # 关闭游标
+        cursor.close()
+        # 关闭数据库链接
+        conn.close()
+
+
+    （2）修改数据库后数据进去了但是还没有保持，
+        一定要使用connect对象commit()方法
+        如果要取消修改，使用connect对象的rollback()方法
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
